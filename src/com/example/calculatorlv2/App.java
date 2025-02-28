@@ -77,12 +77,12 @@ public class App {
                         // 이를 매꾸기 위해 .size() -1 을 하면 가장 마지막 인덱스에 접근 할 수 있다.
 
                         calculator.calculator(leftValue, rightValue, operator);
+
+                        // getter 활용
                         System.out.println(leftValue + " " + operator + " " + rightValue + " = " + calculator.getResultSet(calculator.resultSetSize - 1));
                         break;
                     }
-
                 }
-
             }
 
             System.out.print("exit 를 입력하면 계산기를 종료합니다. 계속하려면 아무키 입력 : ");
@@ -101,10 +101,9 @@ public class App {
             } catch (Exception e) {
                 break;
             }
-
         }
 
-
+        // setter 활용
         calculator.setResultSet(0, 999999);
         i = 0;
         while (true) {
@@ -115,6 +114,19 @@ public class App {
                 break;
             }
         }
+
+        // removeFirstEntry 활용
+        calculator.removeFirstEntry();
+        i = 0;
+        while (true) {
+            try {
+                System.out.println(calculator.getResultSet(i));
+                i++;
+            } catch (Exception e) {
+                break;
+            }
+        }
+
         System.out.println();
         // 스캐너 종료
         scanner1.close();
