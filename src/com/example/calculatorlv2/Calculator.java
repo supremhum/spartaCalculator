@@ -9,13 +9,18 @@ public class Calculator {
     // 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성
     // 연산 결과를 저장하는 공간이 있다.
     private ArrayList<Integer> resultSet;
-    public int resultSetSize = 0;
+    public int resultSetSize;
+//    public int resultSetSize = 0;
+//     public int resultSetSize = resultSet.size();// <<< 얘로하면 널포인트 발생
     // 여기서 null 값을 point하는 문제가 있었다.
     // 계산할 때마다 직접 후위증감연산을 하는 것으로 바꿈
+    // 또는
+
 
     // 생성자로 만들면 결과 집합을 새로 가진다
     public Calculator() {
         this.resultSet = new ArrayList<>();
+        this.resultSetSize = this.resultSet.size();
     }
 
     // return 연산결과인 매서드 구현 정수, 정수, 연산자 입력받으면 해당 연산결과 보내줌
@@ -24,22 +29,22 @@ public class Calculator {
             case '+':
                 result = leftValue + rightValue;
                 this.resultSet.add(result);
-                resultSetSize++;
+//                resultSetSize++;
                 return result;
             case '-':
                 result = leftValue - rightValue;
                 this.resultSet.add(result);
-                resultSetSize++;
+//                resultSetSize++;
                 return result;
             case '*':
                 result = leftValue * rightValue;
                 this.resultSet.add(result);
-                resultSetSize++;
+//                resultSetSize++;
                 return result;
             case '/':
                 result = leftValue / rightValue;
                 this.resultSet.add(result);
-                resultSetSize++;
+//                resultSetSize++;
                 return result;
             default:
                 System.out.println("알수 없는 연산 구문");
