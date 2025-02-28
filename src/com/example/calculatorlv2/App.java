@@ -92,7 +92,7 @@ public class App {
             }
             scanner1.nextLine();
         }
-        System.out.print("지금껏 계산 결과들 입니다.");
+
         int i = 0;
         while (true) {
             try {
@@ -103,7 +103,6 @@ public class App {
             }
         }
 
-        System.out.print("\n첫번째 계산 결과를 999999 로 set한 뒤 결과들 입니다.");
         // setter 활용
         calculator.setResultSet(0, 999999);
         i = 0;
@@ -116,7 +115,6 @@ public class App {
             }
         }
 
-        System.out.print("\n첫번째 결과인 999999를 뺀 결과들입니다");
         // removeFirstEntry 활용
         calculator.removeFirstEntry();
         i = 0;
