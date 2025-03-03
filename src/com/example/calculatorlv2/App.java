@@ -22,7 +22,7 @@ public class App {
 
                 calculator.calculator(inputHandler.leftValue, inputHandler.rightValue, inputHandler.operator);
 
-                System.out.println(inputHandler.leftValue + " " + inputHandler.operator + " " + inputHandler.rightValue + " = " + calculator.getResultSet(calculator.resultSetSize-1));
+                System.out.println(inputHandler.leftValue + " " + inputHandler.operator + " " + inputHandler.rightValue + " = " + calculator.getResultSet(calculator.resultSetSize - 1));
             } else {
                 System.out.println("0으로 나눌 수 없습니다.\n");
             }
@@ -35,39 +35,24 @@ public class App {
             scanner1.nextLine();
         }
 
-        i = 0;
-        while (true) {
-            try {
-                System.out.println(calculator.getResultSet(i));
-                i++;
-            } catch (Exception e) {
-                break;
-            }
+        for (i = 0; i <= calculator.resultSetSize-1; i++) {
+            System.out.println(calculator.getResultSet(i));
         }
+        System.out.println("게터검사끝\n");
 
         // setter 활용
         calculator.setResultSet(0, 999999);
-        i = 0;
-        while (true) {
-            try {
-                System.out.println(calculator.getResultSet(i));
-                i++;
-            } catch (Exception e) {
-                break;
-            }
+        for (i = 0; i <= calculator.resultSetSize-1; i++) {
+            System.out.println(calculator.getResultSet(i));
         }
+        System.out.println("세터검사끝\n");
 
         // removeFirstEntry 활용
         calculator.removeFirstEntry();
-        i = 0;
-        while (true) {
-            try {
+        for (i=0;i<=calculator.resultSetSize-1;i++) {
                 System.out.println(calculator.getResultSet(i));
-                i++;
-            } catch (Exception e) {
-                break;
-            }
         }
+        System.out.println("remover검사 끝\n");
 
         System.out.println();
         // 스캐너 종료

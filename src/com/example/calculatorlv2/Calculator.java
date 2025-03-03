@@ -61,6 +61,7 @@ public class Calculator {
     // ArrayList.remove(index) 를 알았고 index=0 이면 가장 첫번째 결과가 지워지는것
     public void removeFirstEntry(){
         resultSet.remove(0);
+        resultSetSize--;
     }
 
     // 게터
