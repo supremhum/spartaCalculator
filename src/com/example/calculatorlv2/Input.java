@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Input {
     // 속성
-    private int leftValue;
-    private int rightValue;
-    private char operator;
-    private char[] operatorSet = {'+', '-', '*', '/'}; // 연산자 집합
+    public int leftValue;
+    public int rightValue;
+    public char operator;
+    private final char[] operatorSet = {'+', '-', '*', '/'}; // 연산자 집합
 
     // 생성
     public Input () {}
