@@ -10,6 +10,7 @@ public class App {
         Input inputHandler = new Input();
 
         // 실행
+        System.out.println("===== 계산기를 실행합니다 =====");
         while (true) {
             // 입력 라인
             inputHandler.leftValue();
@@ -21,7 +22,7 @@ public class App {
 
                 calculator.calculator(inputHandler.leftValue, inputHandler.rightValue, inputHandler.operator);
 
-                System.out.println(inputHandler.leftValue + " " + inputHandler.operator + " " + inputHandler.rightValue + " = " + calculator.getResultSet(calculator.resultSetSize));
+                System.out.println(inputHandler.leftValue + " " + inputHandler.operator + " " + inputHandler.rightValue + " = " + calculator.getResultSet(calculator.resultSetSize-1));
             } else {
                 System.out.println("0으로 나눌 수 없습니다.\n");
             }
