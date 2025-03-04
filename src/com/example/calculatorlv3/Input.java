@@ -1,6 +1,4 @@
-package com.example.calculatorlv2;
-
-import com.example.calculatorlv3.OperatorType;
+package com.example.calculatorlv3;
 
 import java.util.Scanner;
 
@@ -13,7 +11,7 @@ public class Input {
     OperatorType operatorType;
 
     // 생성
-    public Input () {}
+    public Input() {}
 
     // 기능
     Scanner scanner = new Scanner(System.in);
@@ -76,6 +74,7 @@ public class Input {
                     continue;
                 }
             } catch (Exception e) {
+//                throw new IllegalArgumentException("알 수 없는 연산자");
                 continue;
             }
             break;
